@@ -1,3 +1,4 @@
+#!/bin/bash
 #include "main.h"
 /**
  * main - entry block
