@@ -1,21 +1,16 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * _puts - writes a string to stdout up, not including the null character
- * @str: This is the C string to be written
- * Return: Always 0.
- */
-
+  * _puts - prints a string to standard output
+  * @str: is the string
+  *
+  * Return: is void
+  */
 void _puts(char *str)
 {
-	while (*str != '\0')
-	{
-		int a;
-
-		a = *str;
-
-		_putchar(a);
-		str++;
-	}
-	_putchar('\n');
+while (*str != 0)
+{
+_putchar(*str);
+&*str++;
+}
+_putchar('\n');
 }

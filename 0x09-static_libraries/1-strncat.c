@@ -1,26 +1,28 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
 /**
- * *_strncat - check the code for Holberton School students.
- *@dest:destino
- *@src:source
- *@n:integer
- * Return: Always 0.
- */
+  * _strncat- a function to cat 2 strings by n
+  * @dest: we append to
+  * @src: we appends from
+  * @n: we append by
+  *
+  * Return: char *
+  */
 char *_strncat(char *dest, char *src, int n)
 {
-	char *a = dest;
+	char *begin = dest;
 
 	while (*dest)
-	{
 		dest++;
-	}
-	while (n-- && src)
+	for (; n > 0; n--)
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		if (*src)
+		{
+			*dest = *src;
+			dest++;
+			src++;
+		}
+		else
+			break;
 	}
-	*dest = '\0';
-	return (a);
+return (begin);
 }
