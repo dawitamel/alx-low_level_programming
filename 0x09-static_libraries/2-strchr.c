@@ -1,25 +1,27 @@
-#include "holberton.h"
-#include <stddef.h>
+#include "main.h"
+
 /**
-  * _strchr - locates a character
-  * @s: the string we look thru
-  * @c: the character we look for
-  *
-  * Return: a pointer to the char or NULL
-  *
-  */
+ * _strchr - Function that locates a character in a string
+ * @s: String to be tested
+ * @c: Occurrence of the character
+ * Return: Occurrence
+ */
+
 char *_strchr(char *s, char c)
+
 {
-	if (s == NULL)
-		return (NULL);
-	for (; *s; s++)
+	for ( ; ; s++)
 	{
+
 		if (*s == c)
+		{
 			return (s);
+		}
+		if (*s == '\0')
+		{
+			return ('\0');
+		}
+
 	}
-	if (*s == c)
-	{
-		return (s);
-	}
-	return (NULL);
+	return (s);
 }

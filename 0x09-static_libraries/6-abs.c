@@ -1,11 +1,23 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
-  * _abs - a function that computes absolute value
-  * @i: that's the number
-  *
-  * Return: abs
-  */
-int _abs(int i)
+ * _abs - Function that computes the absolute value of an integer
+ *
+ * @n: The number to be checked
+ *
+ * Return: absolute value
+ */
+int _abs(int m)
+
 {
-return  (i < 0 ? -i : i);
+	if (m < 0)
+	{
+		m *= -1;
+	}
+	else
+	{
+		;
+	}
+
+	return (m);
 }

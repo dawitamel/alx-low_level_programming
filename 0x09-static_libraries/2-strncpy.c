@@ -1,19 +1,25 @@
-#include "holberton.h"
+#include "main.h"
 /**
-  * _strncpy - a function that copies a string
-  * @dest: we copy to
-  * @src: we copy from
-  * @n: we copy by
-  * Return: char
-  */
+ * *_strncpy - check the code for Holberton School students.
+ *@dest:destino
+ *@src:source
+ *@n:integer
+ * Return: Always 0.
+ */
+
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0;
-	char *begin = dest;
+	int a = 0;
 
-	for (; i < n && src[i] != '\0'; i++)
-		dest[i] = src[i];
-	for (; i < n; i++)
-		dest[i] = '\0';
-	return (begin);
+	while (a < n && src[a] != '\0')
+	{
+		dest[a] = src[a];
+		a++;
+	}
+	while (a < n)
+	{
+		dest[a] = '\0';
+		a++;
+	}
+	return (dest);
 }

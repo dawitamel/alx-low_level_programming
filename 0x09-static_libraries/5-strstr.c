@@ -1,31 +1,28 @@
-#include "holberton.h"
-#include <stddef.h>
+#include "main.h"
 /**
-  * _strstr - finds the first occurence of needle in haystack
-  * @haystack: where we look
-  * @needle: what we look for
-  *
-  *
-  * Return: pointer to beginning of located substring or NULL
-  *
-  */
+ * _strstr - check the code for Holberton School students.
+ *@haystack:do something
+ *@needle:do something more
+ * Return: Always 0.
+ */
 char *_strstr(char *haystack, char *needle)
 {
-	int point;
-
-	for (; *haystack; haystack++)
+	while (*haystack)
 	{
-		for (point = 0; needle[point]; point++)
+		char *Begin = haystack;
+		char *pattern = needle;
+
+		while (*haystack && *pattern && *haystack == *pattern)
 		{
-			if (!(*(haystack + point)))
-			{
-				return (NULL);
-			}
-		if (*(haystack + point) != needle[point])
-			break;
+			haystack++;
+			pattern++;
 		}
-		if (needle[point] == '\0')
-			return (haystack);
+
+		if (!*pattern)
+		{
+			return (Begin);
+		}
+		haystack = Begin + 1;
 	}
-	return (NULL);
+	return (0);
 }

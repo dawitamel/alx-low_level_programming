@@ -1,24 +1,24 @@
-#include "holberton.h"
+#include "main.h"
 /**
-  * _strpbrk - located the first occurence in S if any bytes in accept
-  * @s: the string we look for occurrences in
-  * @accept: the print we compare against
-  *
-  * Return: a pointer to the byte or NULL
-  */
+ * _strpbrk - check the code for Holberton School students.
+ *@s:character
+ *@accept:character
+ * Return: Always 0.
+ */
 char *_strpbrk(char *s, char *accept)
 {
-	char c, *p;
+	int i, j;
 
-	for (c = *s; c != 0; s++, c = *s)
+	for (i = 0; s[i]; i++)
 	{
-		for (p = accept; *p != 0; p++)
+		for (j = 0; accept[j]; j++)
 		{
-			if (c == *p)
+			if (accept[j] == s[i])
 			{
-				return (s);
+				return (s + i);
 			}
 		}
+
 	}
-return (0);
+	return (0);
 }

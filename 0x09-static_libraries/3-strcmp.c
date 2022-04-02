@@ -1,22 +1,22 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
-  * _strcmp - a function to compare 2 strings
-  * @s1: the first string
-  * @s2: the second string
-  *
-  * Return: int
-  */
+ * _strcmp - check the code for Holberton School students.
+ *@s1:destino
+ *@s2:source
+ * Return: Always 0.
+ */
+
 int _strcmp(char *s1, char *s2)
 {
-	while (*s1 && *s2)
+
+	while (*s1 && *s2 && *s1 == *s2)
+
 	{
-		if (*s1 == *s2)
-		{
-			s1++;
-			s2++;
-		}
-		else
-		break;
+		++s1;
+		++s2;
 	}
-	return (*s1 - *s2);
+
+	return ((unsigned char)(*s1) - (unsigned char)(*s2));
+
 }
